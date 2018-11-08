@@ -7,5 +7,5 @@ migrated to GitHub. I guess I never understood what it was for, since I wasn't t
 Once I started playing with Puppet at work and seeing what Github can do for me, I realized that this is where all my scripts
 need to live.
 
-#Caveat
+# Caveat
 After working with Powershell since 2008, I'm still in intermediate mindset. :)
