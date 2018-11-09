@@ -11,3 +11,6 @@ $dc = $Forest.Sites | % { $_.Servers } | Select Name,Domain
 
 #Queries each DC for DNS Server
 $dc | ForEach-Object {Invoke-Command -ComputerName $_.SamAccountName -ScriptBlock {Get-NetAdapter | Get-DnsClientServerAddress}} | Select-Object -Property PSComputerName,ServerAddresses | Where-Object {$_.ServerAddresses -ne ''} | export-csv .\dc_dnssettings.csv -nti
+
+#set DNS
+#Set-DNSClientServerAddress –interfaceIndex 12 –ServerAddresses (“10.0.0.1”,”10.0.0.2”)
